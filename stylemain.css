@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+body {
+    background-color: #fcfbfa; 
+    color: #2c3e50; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    color: #1e3d2f; 
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-family: 'Segoe UI', sans-serif;
+    color: #7f8c8d;
+    font-size: 1.05rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 10px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e6e4e0; 
+    border-radius: 12px;
+    padding: 35px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); 
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #bdc3c7;
+    box-shadow: 0 10px 25px rgba(44, 62, 80, 0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 12px;
+    color: #1e3d2f;
+}
+
+.card-tag {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    color: #557a63; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-description {
+    font-family: 'Segoe UI', sans-serif;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.card-btn {
+    font-family: 'Segoe UI', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2d5a27; 
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+    background-color: #1e3d2f; 
+}
+
+.placeholder-card {
+    background-color: #f5f4f0;
+    border-style: dashed;
+    opacity: 0.7;
+}
+
+.disabled-btn {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px 15px; 
+    }
+
+    header {
+        margin-bottom: 35px;
+    }
+
+    header h1 {
+        font-size: 1.8rem; 
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .grid-container {
+        
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        padding: 0;
+    }
+
+    .card {
+        padding: 25px 20px; 
+    }
+
+    .card-title {
+        font-size: 1.35rem; 
+    }
+}
