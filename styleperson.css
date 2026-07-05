@@ -20,6 +20,60 @@ body {
     max-width: 800px; 
 }
 
+
+.hero-profile-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e6e4e0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-profile-flex .hero-section {
+    flex: 1;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.profile-photo-container {
+    width: 220px;
+    min-width: 220px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e6e4e0;
+    background-color: #f5f4f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    .hero-profile-flex {
+        flex-direction: column-reverse; 
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-photo-container {
+        width: 180px;
+        min-width: 180px;
+        height: 230px;
+    }
+    
+    .status-badge {
+        margin-bottom: 15px;
+    }
+}
+
 .back-link {
     font-family: 'Segoe UI', sans-serif;
     display: inline-block;
