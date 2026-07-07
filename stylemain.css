@@ -17,9 +17,18 @@ body {
 }
 
 
+.header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
 header {
     text-align: center;
-    margin-bottom: 50px;
     max-width: 700px;
     width: 100%;
 }
@@ -38,35 +47,77 @@ header p {
     font-size: 1.05rem;
 }
 
+.corner-emblem {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
 
-.city-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+/* фотки */
+.slider-container {
     width: 100%;
     max-width: 1100px;
     margin-bottom: 50px;
     padding: 0 10px;
 }
 
-.gallery-item {
+.slider-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: #557a63;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.photo-tape {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #557a63 #f5f4f0;
+}
+
+/* Скроллбар для Chrome, Safari, Edge */
+.photo-tape::-webkit-scrollbar {
+    height: 6px;
+}
+.photo-tape::-webkit-scrollbar-track {
+    background: #f5f4f0;
+    border-radius: 10px;
+}
+.photo-tape::-webkit-scrollbar-thumb {
+    background-color: #557a63;
+    border-radius: 10px;
+}
+
+.tape-item {
+    scroll-snap-align: start;
+    flex: 0 0 450px; 
     position: relative;
-    width: 100%;
-    height: 240px;
+    height: 280px;
     overflow: hidden;
     border-radius: 8px;
     border: 1px solid #e6e4e0;
 }
 
-.gallery-img {
+.tape-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover .gallery-img {
-    transform: scale(1.02); 
+.tape-item:hover .tape-img {
+    transform: scale(1.02);
 }
 
 .gallery-caption {
@@ -74,14 +125,13 @@ header p {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(30, 61, 47, 0.85); 
+    background: rgba(30, 61, 47, 0.85);
     color: #ffffff;
     padding: 8px 15px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.85rem;
     text-align: center;
 }
-
 
 .grid-container {
     display: grid;
@@ -154,68 +204,50 @@ header p {
 }
 
 
-.gallery-item.item-emblem {
-    height: 320px; 
-    background-color: #ffffff; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.emblem-img {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    max-height: calc(100% - 40px); 
-    object-fit: contain; 
-    padding: 15px 0;
-}
-
-
-.city-gallery .gallery-item {
-    height: 320px; 
-}
-
-
 @media (max-width: 768px) {
     body {
-        padding: 30px 15px; 
+        padding: 30px 15px;
     }
 
-    header {
-        margin-bottom: 35px;
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .corner-emblem {
+        position: static;
+        transform: none;
+        width: 60px;
     }
 
     header h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 
     header p {
         font-size: 0.95rem;
     }
 
-    
-    .city-gallery {
-        grid-template-columns: 1fr; 
-        gap: 15px;
-        margin-bottom: 35px;
+    .slider-container {
         padding: 0;
+        margin-bottom: 35px;
     }
-
-    .gallery-item {
-        height: 180px; 
-    }
-
     
+    .tape-item {
+        flex: 0 0 85vw; 
+        height: 200px;
+    }
+
     .grid-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 0;
     }
 
     .card {
-        padding: 25px 20px; 
+        padding: 25px 20px;
     }
 
     .card-title {

@@ -9,12 +9,22 @@
 <body>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Вернуться к списку</a>
+        <!-- Обертка для ссылки возврата и герба в углу -->
+        <div class="header-container" style="justify-content: flex-start; margin-bottom: 20px;">
+            <img src="images/gerbb.png" alt="Герб Югорска" class="corner-emblem">
+            <a href="index.html" class="back-link" style="margin-bottom: 0; margin-left: 90px;">← Вернуться к списку</a>
+        </div>
+        
+        <!-- Небольшой внутренний фикс адаптации ссылки возврата -->
+        <style>
+            @media (max-width: 768px) {
+                .back-link { margin-left: 0 !important; margin-top: 10px; }
+            }
+        </style>
 
-
+        <!-- Главная секция с фото личности -->
         <div class="hero-profile-flex">
             <div class="hero-section">
-                <div class="subtitle">Исследовательская работа «Хозяин города»</div>
                 <h1>Салахов Раис Закиевич</h1>
                 <div class="status-badge">Глава города Югорска (2000 — 2018)</div>
                 

@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 body {
     background-color: #fcfbfa;
     color: #2c3e50;
-    line-height: 1.7;
+    line-height: 170%;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -21,57 +22,21 @@ body {
 }
 
 
-.hero-profile-flex {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    border-bottom: 1px solid #e6e4e0;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-
-.hero-profile-flex .hero-section {
-    flex: 1;
-    margin-bottom: 0;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.profile-photo-container {
-    width: 220px;
-    min-width: 220px;
-    height: 280px;
-    overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid #e6e4e0;
-    background-color: #f5f4f0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-}
-
-.profile-img {
+.header-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
 }
 
-
-@media (max-width: 768px) {
-    .hero-profile-flex {
-        flex-direction: column-reverse; 
-        gap: 25px;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .profile-photo-container {
-        width: 180px;
-        min-width: 180px;
-        height: 230px;
-    }
-    
-    .status-badge {
-        margin-bottom: 15px;
-    }
+.corner-emblem {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: auto;
+    object-fit: contain;
 }
 
 .back-link {
@@ -79,19 +44,28 @@ body {
     display: inline-block;
     color: #557a63;
     text-decoration: none;
-    margin-bottom: 40px;
     font-weight: 500;
     font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
 .back-link:hover {
     color: #1e3d2f;
 }
 
-.hero-section {
-    margin-bottom: 50px;
+
+.hero-profile-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
     border-bottom: 1px solid #e6e4e0;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.hero-profile-flex .hero-section {
+    flex: 1;
 }
 
 .hero-section h1 {
@@ -99,7 +73,7 @@ body {
     font-weight: normal;
     color: #1e3d2f;
     margin: 10px 0;
-    line-height: 1.2;
+    line-height: 120%;
 }
 
 .subtitle {
@@ -126,6 +100,24 @@ body {
     font-size: 1.15rem;
     color: #34495e;
 }
+
+.profile-photo-container {
+    width: 220px;
+    min-width: 220px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e6e4e0;
+    background-color: #f5f4f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .quote-block {
     margin: 35px 0;
@@ -154,7 +146,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Таймлайн */
+
 .timeline {
     margin: 30px 0;
     padding-left: 20px;
@@ -217,7 +209,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.9rem;
     color: #666;
-    line-height: 1.5;
+    line-height: 150%;
 }
 
 .stat-number {
@@ -232,7 +224,7 @@ body {
     margin: 25px 0;
 }
 
-/* Раздел документов */
+
 .faq-section {
     background-color: #ffffff;
     border: 1px solid #e6e4e0;
@@ -289,7 +281,7 @@ footer {
     font-size: 0.85rem;
     color: #95a5a6;
     text-align: center;
-    line-height: 1.5;
+    line-height: 150%;
 }
 
 
@@ -298,21 +290,38 @@ footer {
         padding: 20px 15px;
     }
 
-    .back-link {
-        margin-bottom: 25px;
+    .header-container {
+        flex-direction: column-reverse; 
+        align-items: center;
+        gap: 10px;
     }
 
-    .hero-section {
-        margin-bottom: 30px;
-        padding-bottom: 25px;
+    .corner-emblem {
+        position: static;
+        transform: none;
+        width: 55px;
+    }
+
+    .hero-profile-flex {
+        flex-direction: column-reverse; 
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .profile-photo-container {
+        width: 180px;
+        min-width: 180px;
+        height: 230px;
     }
 
     .hero-section h1 {
-        font-size: 1.85rem; 
+        font-size: 1.85rem;
     }
 
     .lead-text {
-        font-size: 1.05rem; 
+        font-size: 1.05rem;
     }
 
     .quote-block {
@@ -326,7 +335,6 @@ footer {
         margin-top: 35px;
         margin-bottom: 15px;
     }
-
 
     .stats-grid {
         grid-template-columns: 1fr; 
@@ -342,7 +350,6 @@ footer {
         font-size: 1.9rem;
     }
 
-    /* FAQ блок */
     .faq-section {
         padding: 20px 15px;
         margin-top: 35px;
