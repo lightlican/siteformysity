@@ -1,0 +1,370 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fcfbfa;
+    color: #2c3e50;
+    line-height: 170%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; 
+}
+
+
+.header-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.corner-emblem {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+}
+
+.back-link {
+    display: inline-block;
+    color: #557a63;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #1e3d2f;
+}
+
+
+.hero-profile-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e6e4e0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.hero-profile-flex .hero-section {
+    flex: 1;
+}
+
+.hero-section h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #1e3d2f;
+    margin: 10px 0;
+    line-height: 125%;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #f0f4f1;
+    color: #3a5f43;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 22px;
+}
+
+.lead-text {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #34495e;
+    line-height: 165%;
+}
+
+.profile-photo-container {
+    width: 220px;
+    min-width: 220px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e6e4e0;
+    background-color: #f5f4f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.quote-block {
+    margin: 35px 0;
+    padding: 20px 25px;
+    background-color: #f5f7f5;
+    border-left: 3px solid #557a63;
+    font-style: italic;
+    font-weight: 400;
+    color: #455a64;
+    border-radius: 0 8px 8px 0;
+}
+
+.quote-block span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    font-style: normal;
+}
+
+.section-title {
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: #1e3d2f;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+.timeline {
+    margin: 30px 0;
+    padding-left: 20px;
+    border-left: 1px solid #dcdbd7;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #557a63;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #1e3d2f;
+    font-size: 0.95rem;
+}
+
+.timeline-content {
+    font-size: 0.94rem;
+    font-weight: 400;
+    color: #555;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #e6e4e0;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.stat-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e3d2f;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 155%;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2d5a27;
+    margin-bottom: 5px;
+}
+
+.text-content {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2c3e50;
+    margin: 25px 0;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+
+.faq-section {
+    background-color: #ffffff;
+    border: 1px solid #e6e4e0;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.faq-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3d2f;
+    margin-bottom: 15px;
+}
+
+.faq-intro {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f5f4f0;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.question {
+    font-weight: 600;
+    color: #2d5a27;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.answer {
+    font-size: 0.94rem;
+    font-weight: 400;
+    color: #555;
+}
+
+footer {
+    margin-top: 70px;
+    border-top: 1px solid #e6e4e0;
+    padding-top: 25px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #95a5a6;
+    text-align: center;
+    line-height: 155%;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .corner-emblem {
+        position: static;
+        transform: none;
+        width: 55px;
+    }
+
+    .hero-profile-flex {
+        flex-direction: column-reverse;
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .profile-photo-container {
+        width: 180px;
+        min-width: 180px;
+        height: 230px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.65rem;
+    }
+
+    .lead-text {
+        font-size: 0.98rem;
+    }
+
+    .quote-block {
+        padding: 15px;
+        margin: 25px 0;
+        font-size: 0.92rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .faq-section {
+        padding: 20px 15px;
+        margin-top: 35px;
+    }
+
+    .faq-section h3 {
+        font-size: 1.15rem;
+    }
+}
